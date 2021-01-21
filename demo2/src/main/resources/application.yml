@@ -1,0 +1,15 @@
+server:
+  port: 8089
+---
+application:
+  datasourceProps:
+    -
+      name: asan
+      url: jdbc:mysql://localhost:3306/demo1?createDatabaseIfNotExist=true
+      username: root
+      password: govl0519
+    -
+      name: sev
+      url: jdbc:mysql://localhost:3306/demo2?createDatabaseIfNotExist=true
+      username: root
+      password: govl0519
