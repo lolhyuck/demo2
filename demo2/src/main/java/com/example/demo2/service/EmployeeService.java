@@ -13,8 +13,18 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
+    private GrantServiceProvider grantServiceProvider;
+
+    @Autowired
+    public EmployeeService(GrantServiceProvider grantServiceProvider) {
+        this.grantServiceProvider = grantServiceProvider;
+    }
     public List<Employee> getEmployees() {
         List<Employee>  list = employeeRepository.findAll();
+        Demo demo = grantServiceProvider.create("T1");
+        System.out.println(demo.getNameById("simple "));
+        Demo demo2 = grantServiceProvider.create("T2");
+        System.out.println(demo2.getNameById("simple "));
         return list;
     }
 }

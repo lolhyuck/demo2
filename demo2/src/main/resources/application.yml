@@ -5,11 +5,11 @@ application:
   datasourceProps:
     -
       name: asan
-      url: jdbc:mysql://localhost:3306/demo1?createDatabaseIfNotExist=true
+      url: jdbc:mysql://localhost:3306/demo1?createDatabaseIfNotExist=true&serverTimezone=Asia/Seoul
       username: root
       password: govl0519
     -
       name: sev
-      url: jdbc:mysql://localhost:3306/demo2?createDatabaseIfNotExist=true
+      url: jdbc:mysql://localhost:3306/demo2?createDatabaseIfNotExist=true&serverTimezone=Asia/Seoul
       username: root
       password: govl0519

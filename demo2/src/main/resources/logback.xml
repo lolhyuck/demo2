@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
-    <property name="FLUENTD_HOST" value="${FLUENTD_HOST:-115.85.182.200}"/>
-    <property name="FLUENTD_PORT" value="${FLUENTD_PORT:-24224}"/>
-    <appender name="FLUENT" class="ch.qos.logback.more.appenders.DataFluentAppender">
-        <!-- Check tag and label fluentd info: https://docs.fluentd.org/configuration/config-file-->
-        <tag>service.helloworld.access</tag>
-        <label>normal</label>
-        <remoteHost>${FLUENTD_HOST}</remoteHost>
-        <port>${FLUENTD_PORT}</port>
-<!--        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">-->
-<!--            <layout class="ch.qos.logback.contrib.json.classic.JsonLayout">-->
-<!--                <timestampFormat>yyyy-MM-dd'T'HH:mm:ss.SSSX</timestampFormat>-->
-<!--                <timestampFormatTimezoneId>Etc/UTC</timestampFormatTimezoneId>-->
-<!--                <appendLineSeparator>true</appendLineSeparator>-->
-<!--                <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">-->
-<!--                    <prettyPrint>true</prettyPrint>-->
-<!--                </jsonFormatter>-->
-<!--            </layout>-->
-<!--        </encoder>-->
-    </appender>
+<!--    <property name="FLUENTD_HOST" value="${FLUENTD_HOST:-115.85.182.200}"/>-->
+<!--    <property name="FLUENTD_PORT" value="${FLUENTD_PORT:-24224}"/>-->
+<!--    <appender name="FLUENT" class="ch.qos.logback.more.appenders.DataFluentAppender">-->
+<!--        &lt;!&ndash; Check tag and label fluentd info: https://docs.fluentd.org/configuration/config-file&ndash;&gt;-->
+<!--        <tag>service.helloworld.access</tag>-->
+<!--        <label>normal</label>-->
+<!--        <remoteHost>${FLUENTD_HOST}</remoteHost>-->
+<!--        <port>${FLUENTD_PORT}</port>-->
+<!--&lt;!&ndash;        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">&ndash;&gt;-->
+<!--&lt;!&ndash;            <layout class="ch.qos.logback.contrib.json.classic.JsonLayout">&ndash;&gt;-->
+<!--&lt;!&ndash;                <timestampFormat>yyyy-MM-dd'T'HH:mm:ss.SSSX</timestampFormat>&ndash;&gt;-->
+<!--&lt;!&ndash;                <timestampFormatTimezoneId>Etc/UTC</timestampFormatTimezoneId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <appendLineSeparator>true</appendLineSeparator>&ndash;&gt;-->
+<!--&lt;!&ndash;                <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <prettyPrint>true</prettyPrint>&ndash;&gt;-->
+<!--&lt;!&ndash;                </jsonFormatter>&ndash;&gt;-->
+<!--&lt;!&ndash;            </layout>&ndash;&gt;-->
+<!--&lt;!&ndash;        </encoder>&ndash;&gt;-->
+<!--    </appender>-->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
             <Pattern>
@@ -30,6 +30,6 @@
 
     <root level="info">
         <appender-ref ref="CONSOLE" />
-        <appender-ref ref="FLUENT" />
+<!--        <appender-ref ref="FLUENT" />-->
     </root>
 </configuration>
